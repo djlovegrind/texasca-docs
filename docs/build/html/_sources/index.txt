@@ -9,12 +9,14 @@ Welcome to Hermes software platform documentation!
 Guide
 ^^^^^
 
+.. * :ref:`
+
 .. toctree::
    :maxdepth: 2
-   
-   		howItsHosted
-   		productionDeployment
-   		storeCheckout
+
+   howItsHosted
+   productionDeployment
+   storeCheckout
 
 
 Indices and tables
