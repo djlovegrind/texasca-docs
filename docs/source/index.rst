@@ -6,10 +6,12 @@
 Welcome to Hermes software platform documentation!
 ===================================================
 
-Contents:
+Guide
+^^^^^
 
 .. toctree::
    :maxdepth: 2
+   
    		howItsHosted
    		productionDeployment
    		storeCheckout
