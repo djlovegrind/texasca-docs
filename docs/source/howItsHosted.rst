@@ -1,4 +1,4 @@
-Documentation on our hosting setup
+Our Hosting Setup
 ===================================================
 
 Lots of explaining down here

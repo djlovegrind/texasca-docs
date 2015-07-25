@@ -1,4 +1,4 @@
-How the Store Checkout Works
+E-commerce Checkout
 ===================================================
 
 Lots of explaining down here
