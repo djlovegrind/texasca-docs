@@ -50,6 +50,8 @@ Then try the command ``./admin_api.sh`` or ``./admin_client.sh`` again to succes
 4. Move into Directory Being Updated and Pull Updated Code
 ------------------------------------------------------------
 
+If that was successful, your command line prompt will change again, to something like ``[root@374bfjew37:/ {master} ]$``. This indicates that the creation of the administrative container was successful and that you are acting as the root user in its bash shell.
+
 We are now getting to a part that should be pretty familiar for you and part of the everyday coding process. You just need to navigate to the correct repository for the code you need to update to its newest version. Once there, we are going to ``git pull origin master`` to pull the newest code from master branch hosted on the company's private Github accounts. 
 
 **Before you do this** make sure to see a ``git diff`` to make sure no unintended changes are going to be updated to our production environment code. If everything looks in order, go ahead and ``git pull origin master``.
