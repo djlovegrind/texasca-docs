@@ -59,7 +59,9 @@ We are now getting to a part that should be pretty familiar for you and part of 
 5. Build from Source
 ----------------------
 
-Before you are ready to have the updated code run on production, run ``grunt build`` from the command line to build the updated application from source. You should be done now doing work from inside of the container. Hit ``Ctrl`` + ``P`` + ``Q`` to get back outside of the specific container. 
+Before you are ready to have the updated code run on production, run ``grunt build`` from the command line to build the updated application from source. 
+
+You should be done now doing work from inside of the container. Hit ``Ctrl`` + ``P`` + ``Q`` to get back outside of the specific container. 
 
 6. Docker Commit new Admin Image
 ---------------------------------
@@ -72,7 +74,7 @@ Now commit the new administrative container you have made and updated using comm
 
 You can now remove the old container your administrative one is going to replace. This **is** the container actually running live on production, but it will be automatically replaced by the administrative container you have just created after you remove it. Run ``docker rm -f CONTAINER_ID`` to remove it.
 
-You should now have the updated code running on production! Run ``docker ps`` to checkout your handywork and confirm that a container was just created running the new code. Please remember to ``docker rm`` the now useless administrative container, which should clearly have been created longer ago than the actual production container that should have just spawned. 
+You should now have the updated code running on production! Run ``docker ps`` to checkout your handywork and confirm that a container was just created running the new code. Please remember to ``docker rm`` the now useless administrative container, which should clearly have been created longer ago than the actual production container that just spawned. 
 
 8. Exit SSH Session
 ------------------------

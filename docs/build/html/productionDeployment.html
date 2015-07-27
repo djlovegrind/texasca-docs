@@ -159,7 +159,8 @@
 </div>
 <div class="section" id="build-from-source">
 <h2>5. Build from Source<a class="headerlink" href="#build-from-source" title="Permalink to this headline">¶</a></h2>
-<p>Before you are ready to have the updated code run on production, run <code class="docutils literal"><span class="pre">grunt</span> <span class="pre">build</span></code> from the command line to build the updated application from source. You should be done now doing work from inside of the container. Hit <code class="docutils literal"><span class="pre">Ctrl</span></code> + <code class="docutils literal"><span class="pre">P</span></code> + <code class="docutils literal"><span class="pre">Q</span></code> to get back outside of the specific container.</p>
+<p>Before you are ready to have the updated code run on production, run <code class="docutils literal"><span class="pre">grunt</span> <span class="pre">build</span></code> from the command line to build the updated application from source.</p>
+<p>You should be done now doing work from inside of the container. Hit <code class="docutils literal"><span class="pre">Ctrl</span></code> + <code class="docutils literal"><span class="pre">P</span></code> + <code class="docutils literal"><span class="pre">Q</span></code> to get back outside of the specific container.</p>
 </div>
 <div class="section" id="docker-commit-new-admin-image">
 <h2>6. Docker Commit new Admin Image<a class="headerlink" href="#docker-commit-new-admin-image" title="Permalink to this headline">¶</a></h2>
@@ -168,7 +169,7 @@
 <div class="section" id="remove-old-container-so-the-new-container-can-spawn">
 <h2>7. Remove Old Container so the New Container can Spawn<a class="headerlink" href="#remove-old-container-so-the-new-container-can-spawn" title="Permalink to this headline">¶</a></h2>
 <p>You can now remove the old container your administrative one is going to replace. This <strong>is</strong> the container actually running live on production, but it will be automatically replaced by the administrative container you have just created after you remove it. Run <code class="docutils literal"><span class="pre">docker</span> <span class="pre">rm</span> <span class="pre">-f</span> <span class="pre">CONTAINER_ID</span></code> to remove it.</p>
-<p>You should now have the updated code running on production! Run <code class="docutils literal"><span class="pre">docker</span> <span class="pre">ps</span></code> to checkout your handywork and confirm that a container was just created running the new code. Please remember to <code class="docutils literal"><span class="pre">docker</span> <span class="pre">rm</span></code> the now useless administrative container, which should clearly have been created longer ago than the actual production container that should have just spawned.</p>
+<p>You should now have the updated code running on production! Run <code class="docutils literal"><span class="pre">docker</span> <span class="pre">ps</span></code> to checkout your handywork and confirm that a container was just created running the new code. Please remember to <code class="docutils literal"><span class="pre">docker</span> <span class="pre">rm</span></code> the now useless administrative container, which should clearly have been created longer ago than the actual production container that just spawned.</p>
 </div>
 <div class="section" id="exit-ssh-session">
 <h2>8. Exit SSH Session<a class="headerlink" href="#exit-ssh-session" title="Permalink to this headline">¶</a></h2>
