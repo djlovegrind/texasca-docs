@@ -73,7 +73,17 @@
           
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="howItsHosted.html">Our Hosting Setup</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Deploying to Production</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Deploying to Production</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#step-1-register-your-ssh-key-with-digital-ocean">Step 1: Register your SSH Key with Digital Ocean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gain-access-to-the-docker-container">2. Gain Access to the Docker Container</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#startup-admin-client">3. Startup Admin Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#move-into-directory-being-updated-and-pull-updated-code">4. Move into Directory Being Updated and Pull Updated Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#build-from-source">5. Build from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#docker-commit-new-admin-image">6. Docker Commit new Admin Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#remove-old-container-so-the-new-container-can-take-its-place">7. Remove Old Container so the New Container can take its Place</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exit-ssh-session">8. Exit SSH Session</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="storeCheckout.html">E-commerce Checkout</a></li>
 </ul>
 
@@ -114,7 +124,41 @@
             
   <div class="section" id="deploying-to-production">
 <h1>Deploying to Production<a class="headerlink" href="#deploying-to-production" title="Permalink to this headline">¶</a></h1>
-<p>Lots of explaining down here</p>
+<p>The Hermes Software Platform is hosted using something called Docker Containers.</p>
+<p>Docker wraps up our software on a complete filesystem, that way it can run just like it does on your local computer. These are the so-called &#8220;containers.&#8221;</p>
+<p>To deploy updated code so that it runs on our production environment you need to follow the simple instructions listed in these docs. <strong>Always proceed with caution when interacting with live production processes.</strong> Problems in the production environment can be delicate to fix, and if things go down our customers will very likely be affected!</p>
+<p>So, on to our how-to for deploying to production!</p>
+<div class="section" id="step-1-register-your-ssh-key-with-digital-ocean">
+<h2>Step 1: Register your SSH Key with Digital Ocean<a class="headerlink" href="#step-1-register-your-ssh-key-with-digital-ocean" title="Permalink to this headline">¶</a></h2>
+<p>If you have already been added as a registered user for our Docker container environment, you can proceed directly to Step 2. Otherwise, contact Zachary Cook to have your ssh key added as a user for our hosting solution.</p>
+<p>You will need to share your ssh key, and be added as a user.</p>
+</div>
+<div class="section" id="gain-access-to-the-docker-container">
+<h2>2. Gain Access to the Docker Container<a class="headerlink" href="#gain-access-to-the-docker-container" title="Permalink to this headline">¶</a></h2>
+<p>Once you are ready, navigate to the directory location where your ssh key is held. (Typically this is in your root directory &#8211;&gt; .ssh. So from root you would navigate to it with <code class="docutils literal"><span class="pre">cd</span> <span class="pre">.ssh</span></code>)</p>
+<p>When there, type the command <code class="docutils literal"><span class="pre">ssh</span> <span class="pre">core&#64;IP_ADDRESS_FROM_DIGITAL_OCEAN</span> <span class="pre">-i</span> <span class="pre">your_ssh_key</span></code>.</p>
+<p>Replacing, of course, <code class="docutils literal"><span class="pre">IP_ADDRESS_FROM_DIGITAL_OCEAN</span></code> with the IP address you find from your secure Digital Ocean account and <code class="docutils literal"><span class="pre">your_ssh_key</span></code> with the name of your SSH key, usually <code class="docutils literal"><span class="pre">id_rsa</span></code>.</p>
+<p>If this is sucessful, you should see your command line prompt change to <code class="docutils literal"><span class="pre">core&#64;texasca2</span> <span class="pre">~</span> <span class="pre">$</span></code> indicating that you are now in the Docker container environment.</p>
+<p>If unsuccessful, check that the IP address is correct from Digital Ocean or, if that is correct, contact Zachary Cook about making sure that your SSH key is an authorized user for the Docker container.</p>
+</div>
+<div class="section" id="startup-admin-client">
+<h2>3. Startup Admin Client<a class="headerlink" href="#startup-admin-client" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="move-into-directory-being-updated-and-pull-updated-code">
+<h2>4. Move into Directory Being Updated and Pull Updated Code<a class="headerlink" href="#move-into-directory-being-updated-and-pull-updated-code" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="build-from-source">
+<h2>5. Build from Source<a class="headerlink" href="#build-from-source" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="docker-commit-new-admin-image">
+<h2>6. Docker Commit new Admin Image<a class="headerlink" href="#docker-commit-new-admin-image" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="remove-old-container-so-the-new-container-can-take-its-place">
+<h2>7. Remove Old Container so the New Container can take its Place<a class="headerlink" href="#remove-old-container-so-the-new-container-can-take-its-place" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="exit-ssh-session">
+<h2>8. Exit SSH Session<a class="headerlink" href="#exit-ssh-session" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
 
